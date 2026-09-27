@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lê Hà — Operations × Golf x MICE × Travel x Marketing</title>
+<meta name="description" content="Lê Hà — Operations, Events, Golf, MICE, Travel, Marketing & Commercial Projects.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{--ink:#24211e;--muted:#706b65;--paper:#f3efe7;--paper2:#e9e1d5;--wine:#5c2630;--wine2:#7c4650;--champ:#b79a6d;--line:rgba(36,33,30,.14);--white:#fbf9f4;--shadow:0 30px 80px rgba(45,34,25,.12);--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;z-index:999;background-image:radial-gradient(rgba(36,33,30,.18) .55px,transparent .55px);background-size:6px 6px;mix-blend-mode:multiply}
+a{color:inherit;text-decoration:none}.wrap{max-width:1440px;margin:auto;padding:0 5.2vw}.eyebrow{font:700 10px/1 'DM Sans';letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.serif{font-family:'Playfair Display',serif}.display{font:800 clamp(58px,10vw,150px)/.82 'Manrope';letter-spacing:-.07em}.section{padding:150px 0;border-top:1px solid var(--line)}.small{font-size:13px;color:var(--muted)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;background:linear-gradient(to bottom,rgba(243,239,231,.92),rgba(243,239,231,0));backdrop-filter:blur(10px)}nav{display:flex;justify-content:space-between;align-items:center}.brand{font:800 13px/1 'Manrope';letter-spacing:.12em}.navlinks{display:flex;gap:28px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero{min-height:100vh;display:grid;align-items:end;padding:170px 0 80px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:55vw;height:55vw;border-radius:50%;right:-18vw;top:4vh;background:radial-gradient(circle,rgba(124,70,80,.16),transparent 65%);filter:blur(12px)}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:7vw;align-items:end;position:relative;z-index:2}.hero-kicker{margin-bottom:32px}.hero h1{margin:0;max-width:1050px}.hero h1 em{font-family:'Playfair Display';font-weight:500;color:var(--wine);letter-spacing:-.04em}.hero-intro{max-width:480px;margin-left:auto;font-size:16px;line-height:1.85;color:#4d4842}.hero-line{width:90px;height:1px;background:var(--champ);margin:28px 0}.scroll-note{margin-top:70px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.quote{padding:110px 0;position:relative}.quote p{max-width:1000px;margin:0;font:500 clamp(30px,4.2vw,65px)/1.12 'Playfair Display';letter-spacing:-.025em}.quote p:before{content:'“';color:var(--wine);font-size:1.4em;vertical-align:-.2em;margin-right:8px}.quote .attr{margin-top:30px;margin-left:12px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.intro-grid{display:grid;grid-template-columns:220px 1fr;gap:7vw}.sticky{position:sticky;top:110px;height:max-content}.chapter{font:800 clamp(25px,2.6vw,42px)/.95 'Manrope';letter-spacing:-.045em;text-transform:uppercase}.story{max-width:800px}.story h2{font:700 clamp(30px,3.4vw,52px)/1.02 'Manrope';letter-spacing:-.045em;margin:0 0 36px}.story p{font-size:16px;line-height:1.9;color:#514c46;margin:0 0 24px}.story p strong{color:var(--ink)}.pull{margin:58px 0;padding:34px 0 34px 28px;border-left:2px solid var(--wine);font:500 27px/1.25 'Playfair Display';color:var(--wine)}
+.media-row{display:grid;grid-template-columns:1.3fr .7fr;gap:20px;margin:70px 0}.frame{position:relative;min-height:420px;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#d8d0c2,#b5a696);box-shadow:var(--shadow);cursor:pointer}.frame.tall{min-height:570px}.frame:after{content:"ADD IMAGE";position:absolute;left:24px;bottom:22px;font-size:9px;letter-spacing:.18em;color:rgba(36,33,30,.55)}.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s var(--ease),transform 2s var(--ease)}.frame.has-image img{opacity:1}.frame:hover img{transform:scale(1.035)}.frame .cap{position:absolute;top:20px;left:20px;padding:7px 10px;border:1px solid rgba(255,255,255,.55);border-radius:999px;color:white;background:rgba(36,33,30,.18);backdrop-filter:blur(8px);font-size:9px;letter-spacing:.13em;text-transform:uppercase;z-index:2}
+.timeline{position:relative;margin-top:70px}.timeline:before{content:"";position:absolute;left:84px;top:0;bottom:0;width:1px;background:var(--line)}.tl{display:grid;grid-template-columns:140px 1fr;gap:45px;padding:0 0 80px}.tl-year{font:700 11px/1 'DM Sans';letter-spacing:.16em;color:var(--muted);padding-top:8px}.tl h3{font:800 27px/1.05 'Manrope';letter-spacing:-.03em;margin:0 0 16px}.tl p{max-width:720px;margin:0;color:#514c46;font-size:15px;line-height:1.85}.tag{display:inline-block;margin-top:18px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:70px}.work-head h2{margin:14px 0 0;font:800 clamp(44px,6vw,82px)/.9 'Manrope';letter-spacing:-.065em}.work-note{max-width:380px;color:var(--muted);font-size:14px;line-height:1.7}.capabilities{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.cap{padding:34px 28px 38px;border-right:1px solid var(--line);min-height:260px}.cap:last-child{border-right:0}.cap-num{font-size:10px;color:var(--champ);letter-spacing:.15em}.cap h3{font:800 17px/1.1 'Manrope';margin:24px 0 12px}.cap p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.darkband{background:var(--ink);color:var(--white);margin-top:0;position:relative;overflow:hidden}.darkband:before{content:"";position:absolute;width:650px;height:650px;border-radius:50%;right:-250px;top:-300px;background:radial-gradient(circle,rgba(183,154,109,.22),transparent 68%)}.darkband .story p{color:rgba(251,249,244,.68)}.darkband .chapter{color:var(--champ)}.darkband .pull{color:#ead9bb;border-color:var(--champ)}
+.projects{padding:90px 0 40px;border-top:1px solid var(--line)}.rail{display:flex;gap:22px;overflow:auto;scrollbar-width:none;padding:0 5.2vw 30px;cursor:grab}.rail::-webkit-scrollbar{display:none}.project-card{min-width:420px;max-width:420px;position:relative;border-radius:24px;overflow:hidden;background:var(--paper2)}.project-card .frame{margin:0;min-height:300px;border-radius:0;box-shadow:none}.bar{height:4px;background:rgba(36,33,30,.1);margin:0 5.2vw;position:relative;border-radius:999px;overflow:hidden}.progress{position:absolute;left:0;top:0;bottom:0;width:18%;background:var(--champ);border-radius:999px;transition:width .2s}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.reveal.in{opacity:1;transform:none}.delay1{transition-delay:.12s}.delay2{transition-delay:.24s}.slow{transition-duration:1.3s}
+.final{padding:160px 0 120px;border-top:1px solid var(--line)}.final h2{font:800 clamp(44px,7vw,110px)/.9 'Manrope';letter-spacing:-.06em;margin:18px 0 32px}.final h2 em{font-family:'Playfair Display';font-weight:500;color:var(--wine)}.final p{max-width:560px;color:var(--muted);font-size:16px;line-height:1.85}.contact{display:inline-block;margin-top:36px;padding:14px 22px;border:1px solid var(--line);border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+footer{display:flex;justify-content:space-between;gap:20px;padding:28px 0 40px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+
+/* ===== NEW: CARD VISIT ĐỘNG / LẬT ===== */
+.bizcard-wrap{perspective:1200px;width:100%;max-width:380px;justify-self:end}
+.bizcard{position:relative;width:100%;aspect-ratio:1.58/1;transform-style:preserve-3d;transition:transform .9s var(--ease);cursor:pointer}
+.bizcard.is-flipped{transform:rotateY(180deg)}
+.bizcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(36,33,30,.18),0 1px 0 rgba(255,255,255,.6) inset}
+.biz-front{background:linear-gradient(145deg,#fffdf8,#e9dfcf);padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between}
+.biz-front-top{display:flex;justify-content:space-between;align-items:start}
+.biz-logo{font:800 11px/1 'Manrope';letter-spacing:.18em}
+.biz-chip{width:42px;height:30px;border-radius:6px;background:linear-gradient(135deg,#b79a6d,#8a6d44);position:relative;overflow:hidden}
+.biz-chip:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-100%);animation:shine 2.8s infinite}
+.biz-name{font:800 22px/1 'Manrope';letter-spacing:-.02em;margin:6px 0 2px}
+.biz-role{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.biz-front-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:18px}
+.biz-contact{font-size:11px;line-height:1.6;color:#4d4842}
+.biz-qr{width:54px;height:54px;border-radius:10px;background:
+  repeating-linear-gradient(0deg,#24211e 0 2px,transparent 2px 4px),
+  repeating-linear-gradient(90deg,#24211e 0 2px,transparent 2px 4px);
+  background-size:100% 100%;opacity:.85}
+.biz-back{transform:rotateY(180deg);background:var(--ink);color:var(--white);padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.biz-back:before{content:"";position:absolute;width:220px;height:220px;right:-60px;top:-60px;border-radius:50%;background:radial-gradient(circle,rgba(183,154,109,.28),transparent 70%)}
+.biz-back h4{font:600 18px/1.1 'Playfair Display';margin:0;position:relative;z-index:1}
+.biz-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1}
+.biz-links a{font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(251,249,244,.18);padding:7px 10px;border-radius:999px;transition:all .3s}
+.biz-links a:hover{background:var(--white);color:var(--ink)}
+.biz-hint{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(251,249,244,.55);margin-top:auto;position:relative;z-index:1}
+
+/* ===== NEW: HIỆU ỨNG MÀU, ĐỘNG NHẸ ===== */
+@keyframes shine{to{transform:translateX(200%)}}
+@keyframes floatA{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,-18px)}}
+@keyframes floatB{0%,100%{transform:translate(0,0)}50%{transform:translate(-12px,16px)}}
+@keyframes gradientShift{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(12deg)}}
+@keyframes borderPulse{0%,100%{border-color:rgba(183,154,109,.35)}50%{border-color:rgba(92,38,48,.45)}}
+.orb{position:absolute;pointer-events:none;border-radius:50%;filter:blur(18px);mix-blend-mode:multiply;opacity:.7}
+.orb1{width:42vw;height:42vw;left:-10vw;top:10vh;background:radial-gradient(circle,rgba(183,154,109,.18),transparent 62%);animation:floatA 9s ease-in-out infinite}
+.orb2{width:32vw;height:32vw;right:5vw;top:55vh;background:radial-gradient(circle,rgba(92,38,48,.13),transparent 65%);animation:floatB 11s ease-in-out infinite}
+.hero h1 em{background:linear-gradient(90deg,var(--wine),var(--wine2),var(--champ),var(--wine));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradientShift 6s ease-in-out infinite alternate}
+.cap{position:relative;overflow:hidden;transition:transform .4s var(--ease)}
+.cap:hover{transform:translateY(-4px)}
+.cap:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--champ),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.cap:hover:after{transform:scaleX(1)}
+.frame{animation:borderPulse 4s ease-in-out infinite}
+.cursor-glow{position:fixed;width:260px;height:260px;pointer-events:none;z-index:40;border-radius:50%;background:radial-gradient(circle,rgba(183,154,109,.14),transparent 70%);transform:translate(-50%,-50%);mix-blend-mode:multiply;opacity:0;transition:opacity .6s}
+
+/* ===== NEW: NÚT MENU GỌN + TRANG CON ===== */
+.menu-btn{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);background:var(--white);display:grid;place-items:center;cursor:pointer;transition:all .3s var(--ease);box-shadow:0 6px 18px rgba(36,33,30,.08)}
+.menu-btn:hover{transform:scale(1.05);border-color:var(--champ)}
+.menu-btn span{display:block;width:16px;height:1.5px;background:var(--ink);position:relative;transition:all .3s}
+.menu-btn span:before,.menu-btn span:after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--ink);transition:all .3s}
+.menu-btn span:before{top:-5px}.menu-btn span:after{top:5px}
+.menu-btn.open span{background:transparent}
+.menu-btn.open span:before{transform:rotate(45deg);top:0}
+.menu-btn.open span:after{transform:rotate(-45deg);top:0}
+.menu-overlay{position:fixed;inset:0;background:rgba(36,33,30,.32);backdrop-filter:blur(4px);z-index:60;opacity:0;pointer-events:none;transition:opacity .4s}
+.menu-overlay.open{opacity:1;pointer-events:auto}
+.menu-panel{position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);background:var(--white);z-index:70;transform:translateX(100%);transition:transform .55s var(--ease);display:flex;flex-direction:column;box-shadow:-30px 0 80px rgba(36,33,30,.18)}
+.menu-panel.open{transform:none}
+.menu-head{padding:28px 30px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.menu-body{padding:26px 30px;overflow:auto;flex:1}
+.menu-section{margin-bottom:34px}
+.menu-section h5{font:700 10px/1 'DM Sans';letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.menu-list{display:grid;gap:6px}
+.menu-list a{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:12px;border:1px solid transparent;background:rgba(36,33,30,.02);font:600 13px/1.2 'Manrope';transition:all .25s}
+.menu-list a:hover{background:var(--paper2);border-color:var(--line);transform:translateX(3px)}
+.menu-list a small{font:400 10px 'DM Sans';color:var(--muted);letter-spacing:.08em}
+.menu-sub{margin-top:10px;display:grid;gap:8px}
+.menu-sub .add-link{border:1px dashed var(--line);background:transparent;color:var(--muted);text-align:center;padding:11px;border-radius:12px;font-size:11px;letter-spacing:.1em}
+.input-row{display:flex;gap:8px;margin-top:8px}
+.input-row input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper);font-size:12px}
+.input-row button{padding:10px 14px;border-radius:10px;border:0;background:var(--ink);color:var(--white);font-size:11px;cursor:pointer}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}.intro-grid{grid-template-columns:1fr}.capabilities{grid-template-columns:1fr 1fr}.bizcard-wrap{justify-self:start;max-width:100%}
+}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="cursor-glow" id="glow"></div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside class="menu-panel" id="menuPanel">
+  <div class="menu-head">
+    <div class="brand">LÊ HÀ — MENU</div>
+    <button class="menu-btn open" id="menuClose"><span></span></button>
+  </div>
+  <div class="menu-body">
+    <div class="menu-section">
+      <h5>Điều hướng chính</h5>
+      <div class="menu-list">
+        <a href="#top">Trang chủ <small>Top</small></a>
+        <a href="#work">Dự án & năng lực <small>Work</small></a>
+        <a href="#approach">Con người <small>People</small></a>
+        <a href="#contact">Liên hệ <small>Contact</small></a>
+      </div>
+    </div>
+    <div class="menu-section">
+      <h5>Trang con / Bài viết — thêm link tại đây</h5>
+      <div class="menu-list" id="subPages">
+        <a href="#" onclick="alert('Bạn có thể thay link này bằng bài viết thật');return false;">GolfCare⁺ — Hệ thống vận hành <small>Case study</small></a>
+        <a href="#" onclick="alert('Bạn có thể thay link này bằng bài viết thật');return false;">MICE & Destination Playbook <small>Article</small></a>
+        <a href="#" onclick="alert('Bạn có thể thay link này bằng bài viết thật');return false;">Marketing thương mại <small>Note</small></a>
+      </div>
+      <div class="menu-sub">
+        <div class="input-row">
+          <input id="newTitle" placeholder="Tên trang, vd: Giải golf ABC">
+          <input id="newUrl" placeholder="Link / URL">
+        </div>
+        <div class="input-row">
+          <button id="addPageBtn">+ Thêm link</button>
+          <button id="clearPagesBtn" style="background:var(--paper2);color:var(--ink);border:1px solid var(--line)">Xóa mẫu</button>
+        </div>
+        <div class="add-link">Tip: Link được lưu local trên trình duyệt này. Export file để giữ vĩnh viễn.</div>
+      </div>
+    </div>
+    <div class="menu-section">
+      <h5>Liên hệ nhanh</h5>
+      <div class="menu-list">
+        <a href="mailto:le.ha.events@domain.com">Email ↗ <small>le.ha.events@domain.com</small></a>
+        <a href="tel:+84900000000">Gọi điện <small>+84 900 000 000</small></a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<header><div class="wrap"><nav>
+<div class="brand">LÊ HÀ</div>
+<div style="display:flex;align-items:center;gap:18px">
+  <div class="navlinks" style="display:none"><a href="#work">Work</a><a href="#approach">People</a><a href="#contact">Contact</a></div>
+  <button class="menu-btn" id="menuOpen"><span></span></button>
+</div>
+</nav></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow hero-kicker reveal">Operations × Golf × MICE × Travel × Marketing</div>
+    <h1 class="display reveal slow">I BUILD.<br>I CONNECT.<br>I MAKE THINGS <em>RUN.</em></h1>
+    <div class="hero-intro reveal delay1">
+      <div class="hero-line"></div>
+      <p>Tôi làm vận hành, sự kiện golf, MICE, travel và các dự án thương mại — nơi mọi thứ cần rõ ràng, đúng nhịp và ra kết quả. Không phô trương, tập trung vào phần việc khó thấy nhưng quyết định trải nghiệm.</p>
+      <div class="scroll-note">SCROLL — STORY MODE</div>
+    </div>
+  </div>
+  <div class="bizcard-wrap reveal delay2">
+    <div class="bizcard" id="bizcard" title="Click để lật">
+      <div class="bizcard-face biz-front">
+        <div class="biz-front-top">
+          <div class="biz-logo">LÊ HÀ<br><span style="color:var(--muted);font-weight:400">SAIGON</span></div>
+          <div class="biz-chip"></div>
+        </div>
+        <div>
+          <div class="biz-name">Lê Hà</div>
+          <div class="biz-role">Operations · Golf · MICE · Marketing</div>
+          <div class="biz-front-bottom">
+            <div class="biz-contact">le.ha.events@domain.com<br>+84 900 000 000<br>Saigon · Vietnam</div>
+            <div class="biz-qr"></div>
+          </div>
+        </div>
+      </div>
+      <div class="bizcard-face biz-back">
+        <div>
+          <h4>Make it clear.<br>Make it move.</h4>
+          <div class="biz-links">
+            <a href="#work">Portfolio</a>
+            <a href="mailto:le.ha.events@domain.com">Email</a>
+            <a href="#contact">GolfCare⁺</a>
+            <a href="#" onclick="document.getElementById('menuOpen').click();return false;">Bài viết →</a>
+          </div>
+        </div>
+        <div class="biz-hint">Click để lật lại · Giữ 2s để copy contact</div>
+      </div>
+    </div>
+    <div class="small" style="margin-top:12px;letter-spacing:.12em">CARD VISIT ĐỘNG — CLICK ĐỂ LẬT · DRAG NHẸ ĐỂ NGHIÊNG 3D</div>
+  </div>
+</div></section>
+
+<section class="quote"><div class="wrap"><p class="reveal">Công việc vận hành không hào nhoáng, nhưng nó là thứ giữ cho mọi trải nghiệm không vỡ.</p><div class="attr reveal delay1">A note on operations</div></div></section>
+
+<section class="section" id="work"><div class="wrap">
+<div class="work-head"><div><div class="eyebrow reveal">03 / What I do</div><h2 class="reveal">THINGS I<br>BUILD & RUN</h2></div><div class="work-note reveal delay1">Từ giải golf vài trăm người tới hệ thống chăm sóc khách hàng lặp lại hàng tuần. Tôi quan tâm tới quy trình có thể lặp, đo được, và cải tiến được.</div></div>
+<div class="capabilities">
+  <div class="cap reveal"><div class="cap-num">01</div><h3>Golf Operations</h3><p>Vận hành giải đấu, hệ thống handicap, chăm sóc hội viên, GolfCare⁺.</p></div>
+  <div class="cap reveal delay1"><div class="cap-num">02</div><h3>MICE & Travel</h3><p>Thiết kế hành trình, điều phối supplier, quản lý rủi ro hiện trường.</p></div>
+  <div class="cap reveal delay2"><div class="cap-num">03</div><h3>Marketing & Commercial</h3><p>Proposal, sponsorship, content vận hành, tối ưu chuyển đổi thực.</p></div>
+  <div class="cap reveal"><div class="cap-num">04</div><h3>System & Team</h3><p>Tài liệu hóa, checklist, automation phần lặp — để người làm việc tinh tế hơn.</p></div>
+</div>
+</div></section>
+
+<section class="quote"><div class="wrap"><p class="reveal">Tôi không định nghĩa công việc của mình bằng một chức danh duy nhất. Có ngày tôi xây một giải đấu. Có ngày tôi xử lý một vấn đề vận hành. Có ngày tôi ngồi với một proposal, một đối tác, một bảng số hoặc một team đang cần người giữ nhịp.</p><div class="attr reveal delay1">Beyond the job title</div></div></section>
+
+<section id="approach" class="section"><div class="wrap intro-grid"><div class="sticky"><div class="eyebrow">07 / People & partners</div><div class="chapter">CÔNG VIỆC<br>LÀ CON NGƯỜI</div></div><div class="story"><h2 class="reveal">Tôi không tin nhiều vào những mối quan hệ chỉ tồn tại trong một project.</h2><div class="reveal delay1"><p>Nếu chúng ta làm việc cùng nhau, tôi quan tâm liệu nó có thể diễn ra lần nữa không — và lần sau có tốt hơn không.</p><p>Nhiều quan hệ đối tác bắt đầu từ một việc nhỏ: một nhà cung cấp giao trễ nhưng rất cố gắng; một người chơi phàn nàn nhưng vẫn ở lại; một khách hàng ban đầu khó tính rồi sau thành người tin mình. Tôi giữ những mối quan hệ đó vì chúng cộng dồn.</p><div class="pull">“Team cần được nhìn thấy. Khách hàng cần cảm thấy an toàn. Nếu có gì sai, tôi nhận trách nhiệm trước, giải thích sau.”</div><p>Tôi cũng thích làm việc lặng lẽ, chú tâm sâu. Không vội, không ồn. Quyết định được ghi lại. Tiến độ có thể truy vết. Và khi công nghệ có thể lo phần lặp lại, tôi muốn để công nghệ làm việc đó để con người tập trung vào phần cần sự tinh tế.</p></div><div class="media-row reveal slow"><div class="frame" data-image="people"><span class="cap">PEOPLE / PARTNERS</span><input type="file" accept="image/*" hidden></div><div class="frame tall" data-image="behind"><span class="cap">BEHIND THE WORK</span><input type="file" accept="image/*" hidden></div></div></div></div></section>
+
+<section class="final" id="contact"><div class="wrap"><div class="eyebrow reveal">08 / Currently building</div><h2 class="reveal slow">Make it clear.<br>Make it <em>move.</em></h2><p class="reveal delay1">Hiện tại tôi tập trung vào hai hướng: xây GolfCare⁺ thành một hệ thống thay vì chỉ là một dịch vụ; và xây một team đủ năng lực để tự vận hành phần lớn công việc, để tôi dành thời gian cho những phần cần ownership, judgment và các quyết định quan trọng.</p><a class="contact reveal delay2" href="mailto:le.ha.events@domain.com">Start a conversation ↗</a></div></section>
+<footer class="wrap"><span>© 2026 LÊ HÀ — I BUILD. I CONNECT. I MAKE THINGS RUN.</span><span>SAIGON · VIETNAM</span></footer>
+</main>
+
+<script>
+// reveal
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+window.addEventListener('load',()=>document.querySelector('.hero').classList.add('ready'));
+
+// CARD VISIT 3D FLIP + TILT
+const card=document.getElementById('bizcard');
+const wrap=card.parentElement;
+let isDown=false, startX=0, rot=0;
+card.addEventListener('click',e=>{ if(Math.abs(rot)>8) return; card.classList.toggle('is-flipped') });
+card.addEventListener('pointerdown',e=>{isDown=true;startX=e.clientX;card.setPointerCapture(e.pointerId)});
+card.addEventListener('pointermove',e=>{
+  if(!isDown) return;
+  const dx=e.clientX-startX;
+  rot=dx*0.18;
+  card.style.transform=`rotateY(${card.classList.contains('is-flipped')?180+rot:rot}deg) rotateX(${dx*0.03}deg)`;
+  wrap.style.transform=`perspective(1200px) rotateX(${-dx*0.02}deg)`;
+});
+const endDrag=()=>{
+  if(!isDown) return;
+  isDown=false;
+  rot=0;
+  card.style.transform='';
+  wrap.style.transform='';
+};
+card.addEventListener('pointerup',endDrag);
+card.addEventListener('pointercancel',endDrag);
+let pressTimer;
+card.addEventListener('pointerdown',()=>{pressTimer=setTimeout(()=>{navigator.clipboard.writeText('Lê Hà — le.ha.events@domain.com — +84 900 000 000');card.querySelector('.biz-hint').textContent='Đã copy contact ✓';setTimeout(()=>card.querySelector('.biz-hint').textContent='Click để lật lại · Giữ 2s để copy contact',1500)},900)});
+card.addEventListener('pointerup',()=>clearTimeout(pressTimer));
+
+// cursor glow + color
+const glow=document.getElementById('glow');
+let gx=0,gy=0,tx=0,ty=0;
+window.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;glow.style.opacity='1'});
+(function animGlow(){gx+=(tx-gx)*0.12;gy+=(ty-gy)*0.12;glow.style.left=gx+'px';glow.style.top=gy+'px';requestAnimationFrame(animGlow)})();
+window.addEventListener('mouseleave',()=>glow.style.opacity='0');
+
+// MENU GỌN
+const openBtn=document.getElementById('menuOpen');
+const closeBtn=document.getElementById('menuClose');
+const panel=document.getElementById('menuPanel');
+const overlay=document.getElementById('menuOverlay');
+function openMenu(){panel.classList.add('open');overlay.classList.add('open');openBtn.classList.add('open');document.body.style.overflow='hidden'}
+function closeMenu(){panel.classList.remove('open');overlay.classList.remove('open');openBtn.classList.remove('open');document.body.style.overflow=''}
+openBtn.addEventListener('click',openMenu);
+closeBtn.addEventListener('click',closeMenu);
+overlay.addEventListener('click',closeMenu);
+
+// Subpages local storage
+const subPages=document.getElementById('subPages');
+const STORAGE_KEY='leha_subpages_v1';
+function loadPages(){
+  const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
+  if(saved.length){subPages.innerHTML=''; saved.forEach(p=>appendLink(p.title,p.url));}
+}
+function savePages(){
+  const arr=[...subPages.querySelectorAll('a')].map(a=>({title:a.childNodes[0].textContent.trim(),url:a.href}));
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(arr));
+}
+function appendLink(title,url){
+  const a=document.createElement('a'); a.href=url||'#'; a.target=url?.startsWith('http')?'_blank':'';
+  a.innerHTML=`${title} <small>↗</small>`;
+  subPages.appendChild(a);
+}
+document.getElementById('addPageBtn').addEventListener('click',()=>{
+  const t=document.getElementById('newTitle').value.trim();
+  const u=document.getElementById('newUrl').value.trim();
+  if(!t) return alert('Nhập tên trang');
+  appendLink(t,u||'#'); savePages();
+  document.getElementById('newTitle').value=''; document.getElementById('newUrl').value='';
+});
+document.getElementById('clearPagesBtn').addEventListener('click',()=>{
+  if(confirm('Xóa hết link mẫu và tự thêm?')){subPages.innerHTML='';localStorage.removeItem(STORAGE_KEY);}
+});
+loadPages();
+
+// image slots
+document.querySelectorAll('[data-image]').forEach(frame=>{
+  const input=frame.querySelector('input'); if(!input) return;
+  frame.addEventListener('click',e=>{if(e.target===input) return; input.click()});
+  input.addEventListener('change',()=>{
+    const f=input.files&&input.files[0]; if(!f) return;
+    const url=URL.createObjectURL(f);
+    let img=frame.querySelector('img'); if(!img){img=document.createElement('img'); frame.prepend(img)}
+    img.src=url; frame.classList.add('has-image');
+  });
+});
+</script>
+</body></html>
