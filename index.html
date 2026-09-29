@@ -16,6 +16,7 @@ QUICK EDIT: Đổi màu toàn site -> _GLOBAL, Đổi Hero -> HERO_CONFIG, Đổ
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LEHA — Make it clear. Make it move.</title>
 
 <meta property="og:title" content="LEHA — Make it clear. Make it move." />
@@ -44,14 +45,14 @@ QUICK EDIT: Đổi màu toàn site -> _GLOBAL, Đổi Hero -> HERO_CONFIG, Đổ
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:88px;overflow-x:hidden;width:100%;max-width:100vw} html,body{overflow-x:clip}
-body{margin:0;width:100%;max-width:100vw;background:var(--bg);color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;font-weight:350;line-height:0.5;letter-spacing:-.01em;overflow-x:hidden;position:relative;-webkit-font-smoothing:antialiased}
+body{margin:0;width:100%;max-width:100vw;background:var(--bg);color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;font-weight:350;line-height:1.65;letter-spacing:-.01em;overflow-x:hidden;position:relative;-webkit-font-smoothing:antialiased}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
 p{margin:0} a{color:inherit;text-decoration:none} ::selection{background:var(--gold);color:#fff}
 /* // // SECTION 0: H-HEADING vs H-EM - BRIEF: H thang den Playfair, H em nghieng wine Instrument | H straight black Playfair, H em italic wine Instrument - Dong bo H1 H2 H3 H4 | Sync H1 H2 H3 H4 - Fix font loi h1em h2em | Fix font broken h1em h2em
    // EDITABLE: Chinh mau o _GLOBAL | Edit colors at _GLOBAL
    // FIX AT: Neu doi mau chung sua o _GLOBAL Search: _GLOBAL | If global color edit at _GLOBAL */
 /* FIX H1 H2 H3 DEN THANG - h2 em h3 em NGHIENG DO DO - Search: _GLOBAL */
-h1,h2,h3{color:#0f0d0c !important;color:var(--ink) !important;font-style:normal !important;font-weight:400 !important;letter-spacing:-.04em;line-height:1.}
+h1,h2,h3{color:#0f0d0c !important;color:var(--ink) !important;font-style:normal !important;font-weight:400 !important;letter-spacing:-.04em;line-height:1.15;}
 h4{font-family:var(--font-display);font-weight:500;margin:0;font-style:normal !important;color:var(--ink) !important;letter-spacing:-.04em;line-height:1.2;font-size:clamp(18px,2.5vw,26px);}
 h1{font-size:clamp(40px,7vw,82px);}
 h2{font-size:clamp(30px,5.5vw,60px);}
@@ -277,6 +278,15 @@ body h1 i, body h2 i, body h3 i,
   line-height:1.05 !important;
 }
 
+</style>
+
+<style>
+/* FIX MOBILE DESKTOP MODE */
+html { -webkit-text-size-adjust: 100%; }
+img, canvas, video { max-width:100%; height:auto; }
+@media (max-width: 860px){
+  .hero { grid-template-columns: 1fr !important; }
+}
 </style>
 </head>
 <body>
